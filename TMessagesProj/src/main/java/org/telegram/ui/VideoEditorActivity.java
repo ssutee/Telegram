@@ -744,8 +744,8 @@ public class VideoEditorActivity extends BaseFragment implements TextureView.Sur
                 if (headerBox.getWidth() != 0 && headerBox.getHeight() != 0) {
                     trackHeaderBox = headerBox;
                     bitrate = (int)(trackBitrate / 100000 * 100000);
-                    if (bitrate > 900000) {
-                        bitrate = 900000;
+                    if (bitrate > 2000000) {
+                        bitrate = 2000000;
                     }
                     videoFramesSize += sampleSizes;
                 } else {
@@ -767,8 +767,8 @@ public class VideoEditorActivity extends BaseFragment implements TextureView.Sur
             resultWidth = originalWidth = (int)trackHeaderBox.getWidth();
             resultHeight = originalHeight = (int)trackHeaderBox.getHeight();
 
-            if (resultWidth > 640 || resultHeight > 640) {
-                float scale = resultWidth > resultHeight ? 640.0f / resultWidth : 640.0f / resultHeight;
+            if (resultWidth > 1280 || resultHeight > 1280) {
+                float scale = resultWidth > resultHeight ? 1280.0f / resultWidth : 1280.0f / resultHeight;
                 resultWidth *= scale;
                 resultHeight *= scale;
                 if (bitrate != 0) {
